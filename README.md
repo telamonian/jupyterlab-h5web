@@ -11,7 +11,7 @@ A JupyterLab extension to explore and visualize HDF5 file contents. Based on [h5
 
 ## Requirements
 
-- JupyterLab 2 or JupyterLab 3
+- JupyterLab 2 (JupyterLab 3 can be used but is not officially supported). 
 
 ## Install
 
@@ -51,6 +51,12 @@ This tab is composed of a sidebar, where you can explore the structure of the HD
 For other types of files, you can change the extension to one of the supported extensions or, if it is widespread, [open an issue](https://github.com/silx-kit/jupyterlab-h5web/issues) to discuss its support.
 
 ## Changelog
+
+### 0.0.6
+
+- Updated `@h5web/app` to version [0.0.12](https://github.com/silx-kit/h5web/releases/tag/v0.0.12)
+- Fixed support of attributes (and therefore NeXus) by installing `jupyterlab_hdf` from the git repo (commit [f5435f5](https://github.com/jupyterlab/jupyterlab-hdf5/commit/f5435f5bdf3f9c8899e6f91e908a21e55e0ab6be)). This is a temporary solution that we expect to fix on next release.
+- Given the possibility to install the extension on JupyterLab 3 (not officially supported yet).
 
 ### 0.0.5
 
