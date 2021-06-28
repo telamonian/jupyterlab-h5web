@@ -14,6 +14,7 @@ class H5Web(DisplayObject):
         if kwargs:
             self.metadata.update(kwargs)
         self._check_data()
+        print(Path.cwd(), file_path, self.data)
 
     def _check_data(self) -> None:
         if not self.data.is_file():

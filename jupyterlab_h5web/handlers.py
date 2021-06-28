@@ -19,6 +19,15 @@ class BaseHandler(APIHandler):
         path = self.get_query_argument("path", None)
         format = self.get_query_argument("format", None)
 
+        self.write(
+            {
+                "filePath": str(file_path),
+                "absFilePath": str(as_absolute_path(self.base_dir, Path(file_path))),
+            }
+        )
+        self.finish()
+        return
+
         with h5py.File(as_absolute_path(self.base_dir, Path(file_path)), "r") as h5file:
             content = self.get_content(h5file, path)
 

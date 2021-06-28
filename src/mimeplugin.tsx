@@ -22,6 +22,9 @@ class HDF5FilePathRenderer extends Widget implements IRenderMime.IRenderer {
       throw new TypeError('Expected string');
     }
 
+    console.log('MODEL.DATA', model.data);
+    console.log('PATH', path);
+
     return new Promise<void>((resolve) => {
       ReactDOM.render(
         <div className="h5web-in-cell">

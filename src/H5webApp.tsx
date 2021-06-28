@@ -21,6 +21,8 @@ function H5webApp(props: { filePath: string }) {
   const { filePath } = props;
   const { baseUrl } = ServerConnection.makeSettings();
 
+  console.log('FILEPATH', filePath);
+
   return (
     <div className="h5web-root">
       <H5GroveProvider
